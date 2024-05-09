@@ -1,5 +1,18 @@
 import contactpfp from "../assets/icon-profile.png";
-const Popup = ({ close, el } : any) => {
+import { FunctionComponent } from "react";
+interface User {
+  id: number;
+  firstname: string;
+  lastname: string;
+  mobile: string;
+  status: string;
+}
+
+interface PopupProps {
+  close: Function;
+  el: User;
+}
+const Popup : FunctionComponent<PopupProps> = ({ close, el })=> {
 
 
 

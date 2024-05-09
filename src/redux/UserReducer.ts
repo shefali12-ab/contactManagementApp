@@ -1,7 +1,15 @@
 // reducers.js
 import { createSlice } from "@reduxjs/toolkit";
 
-const userList: never[] =[]
+interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  mobile: string;
+  status: string;
+  
+}
+const userList: any =[]
 
 const userSlice = createSlice({
   name:"users",
@@ -13,7 +21,7 @@ const userSlice = createSlice({
     },
     editUser : (state,action) =>{
      const {id,firstname, lastname, mobile, status} = action.payload
-     const uu= state.find(user => user.id == id)
+     const uu= state.find((user :User) => user.id == id)
       if(uu){
         uu.firstname= firstname
         uu.lastname=lastname
@@ -23,7 +31,7 @@ const userSlice = createSlice({
     },
     deleteUser : (state,action) =>{
       const {id} = action.payload
-      const uu= state.find(user => user.id == id)
+      const uu= state.find((user:User) => user.id == id)
       if(uu)
         {
           return state.filter ( f=> f.id !== id)

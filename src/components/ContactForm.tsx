@@ -10,7 +10,7 @@ const ContactForm = () => {
   const [lastname , setlastname] = useState('')
   const [mobile , setmobile] = useState('')
   const [status , setstatus] = useState('active')
-  const users = useSelector((state)=> state.users)
+  const users = useSelector((state : any)=> state.users)
   const dispatch = useDispatch()
   const navigate = useNavigate();
   const handleSubmit = (e: { preventDefault: () => void; }) =>{

@@ -7,8 +7,8 @@ const EditContactForm = () => {
     
     const dispatch = useDispatch()
     const {id }= useParams()
-    const users = useSelector((state)=> state.users);
-    const exisitingUser = users.filter(f=> f.id ==id);
+    const users = useSelector((state : any)=> state.users);
+    const exisitingUser = users.filter((f:any) => f.id ==id);
     const {firstname , lastname , mobile , status} = exisitingUser[0]
     const [ufirstname , setfirstname] = useState(firstname)
     const [ulastname , setlastname] = useState(lastname)
@@ -16,7 +16,7 @@ const EditContactForm = () => {
     const [ustatus , setstatus] = useState(status)
 
     const navigate = useNavigate()
-    const handleEdit = (e)=>{
+    const handleEdit = (e : any)=>{
       e.preventDefault();
       dispatch(editUser({
         id:id,

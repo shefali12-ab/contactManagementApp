@@ -13,7 +13,7 @@ const WorldMap=(countries:any)=>{
 
     return(
         <div >
-               {countriesData?.map((country) => (
+               {countriesData?.map((country : any) => (
             <Marker
               icon={customMarker}
               key={country.countryInfo._id}

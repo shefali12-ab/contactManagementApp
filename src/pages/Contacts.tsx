@@ -8,17 +8,22 @@ import { deleteUser } from "../redux/UserReducer";
 
 interface Contact {
   id: number;
-  first_name: string;
-  last_name: string;
+  firstname: string;
+  lastname: string;
+  mobile: number;
   status: string;
 }
 
 const Contacts = () => {
-  const AllContacts = useSelector((state) => state.users); // Initialize as empty array if undefined
-  const [isOpen, setIsOpen] = useState(false);
-  const [singleContact, setSingleContact] = useState({});
+  const AllContacts = useSelector((state:any) => state.users); // Initialize as empty array if undefined
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [singleContact, setSingleContact] = useState({
+   
+
+  });
+  let data : Contact 
   const dispatch = useDispatch();
-  const togglePopup = (contact) => {
+  const togglePopup = (contact: Contact) => {
     setSingleContact(contact);
 
     setIsOpen(!isOpen);
@@ -28,7 +33,7 @@ const Contacts = () => {
     // Any side effects or dispatch actions can be placed here
   }, [dispatch, AllContacts.length]);
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: number) => {
     dispatch(deleteUser({ id: id }));
   };
 
@@ -43,10 +48,7 @@ const Contacts = () => {
       </div>
 
       {AllContacts.length === 0 && (
-        <div
-         
-          className="h-screen w-full flex flex-col items-center text-center"
-        >
+        <div className="h-screen w-full flex flex-col items-center text-center">
           <img
             src={contact}
             alt="search image"
@@ -60,9 +62,12 @@ const Contacts = () => {
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {AllContacts.map((el) => {
+        {AllContacts.map((el : Contact) => {
           return (
-            <div   onClick={() => togglePopup(el)} className="   p-2 rounded-lg  m-3 bg-blue-400 text-white">
+            <div
+              onClick={() => togglePopup(el)}
+              className="   p-2 rounded-lg  m-3 bg-blue-400 text-white"
+            >
               <div className="w-3/4 m-auto">
                 <img
                   src={contactpfp}
@@ -71,9 +76,9 @@ const Contacts = () => {
                 />
                 <div>
                   {isOpen && (
-                    <Popup close={() => togglePopup(data)} el={singleContact} />
+                    <Popup close={() => togglePopup( data )} el={singleContact} />
                   )}
-                   {/* <Popup close={() => togglePopup(data)} el={singleContact} /> */}
+                 
                 </div>
                 <div key={el.id} className="p-4">
                   <div className="text-lg">
