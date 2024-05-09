@@ -1,10 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import contact from "../assets/searchimg1.jpg";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import contactpfp from "../assets/icon-profile.png";
-import Popup from "../components/Popup";
+
 import { deleteUser } from "../redux/UserReducer";
+
+import contact from "../assets/searchimg1.jpg";
+import contactpfp from "../assets/icon-profile.png";
+
+import Popup from "../components/Popup";
+
 
 interface Contact {
   id: number;

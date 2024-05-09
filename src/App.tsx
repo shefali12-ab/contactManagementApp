@@ -1,10 +1,14 @@
+
+import {  Route, Routes , useLocation} from "react-router-dom";
+
+import Contacts from "./pages/Contacts";
+import ChartsMaps from "./pages/ChartsMaps";
+
+import EditContactForm from "./components/EditContactForm";
 import ContactForm from "./components/ContactForm";
 import Sidebar from "./components/Sidebar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Contacts from "./pages/Contacts";
-import EditContactForm from "./components/EditContactForm";
-import ChartsMaps from "./pages/ChartsMaps";
-import { useLocation } from "react-router-dom";
+
+
 function App() {
   const location = useLocation();
   const { pathname } = location;

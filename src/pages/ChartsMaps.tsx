@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import  { useEffect } from 'react';
+import {  useQuery } from 'react-query';
 import { Line } from "react-chartjs-2";
 import 'leaflet/dist/leaflet.css';
 
@@ -23,8 +23,8 @@ const ChartsMaps = () => {
     return response.json();
   };
 
-  const { data: chartData, isLoading: chartLoading, isError: chartError } = useQuery('chartData', fetchChartData);
-  const { data: countriesData, isLoading: countriesLoading, isError: countriesError } = useQuery('countries', fetchCountryData);
+  const { data: chartData } = useQuery('chartData', fetchChartData);
+  const { data: countriesData } = useQuery('countries', fetchCountryData);
 
   useEffect( () => {
     fetchChartData();
