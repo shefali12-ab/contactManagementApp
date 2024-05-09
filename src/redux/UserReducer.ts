@@ -17,7 +17,13 @@ const userSlice = createSlice({
   reducers:{
     addUser : (state,action)=> {
      // console.log(action)
-     state.push(action.payload);
+    
+     if(action.payload.firstname=="" || action.payload.lastName=="" || action.payload.mobile==""){
+      alert("Please fill empty fields")
+     }else{
+      state.push(action.payload);
+     }
+     
     },
     editUser : (state,action) =>{
      const {id,firstname, lastname, mobile, status} = action.payload

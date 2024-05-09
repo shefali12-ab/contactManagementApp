@@ -53,11 +53,11 @@ const ChartsMaps = () => {
   };
   return (
     <div className='w-full flex flex-col  items-center p-3 '>
-      <h1 className="text-4xl font-bold mb-4 text-blue-500">Corona Cases Chart</h1>
+      <h1 className="lg:text-4xl font-bold mb-4 text-blue-500">Corona Cases Chart</h1>
       <div className="border-2 border-blue-500 w-[50%] m-auto 10 auto 10">
         {newChartData.datasets ? <Line data={newChartData}  /> : <h1 className="text-blue-500 mb-4 font-bold text-2xl">Loading...</h1>}
       </div>
-      <h1 className="text-4xl font-bold mb-4 mt-4 text-blue-500">Corona Cases World Map</h1>
+      <h1 className="lg:text-4xl font-bold mb-4 mt-4 text-blue-500">Corona Cases World Map</h1>
       <div
         className="border-2 border-blue-500 w-[50%] m-auto 5 auto 5 h-[100%]"
 
