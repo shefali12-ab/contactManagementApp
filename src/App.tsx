@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <nav className="flex justify-center items-center bg-blue-600 text-white text-bold p-6 lg:text-3xl sm:text-xl">
-        {pathname == "/" ? "Contact Management App" : "Charts And Maps"}
+        {pathname == "/" ? "Charts And Maps" : "Contact Management App"}
       </nav>
       <div className="flex w-full ">
         <Sidebar />
