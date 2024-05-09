@@ -12,7 +12,7 @@ interface PopupProps {
   close: Function;
   el: User;
 }
-const Popup : FunctionComponent<PopupProps> = ({ close, el })=> {
+const Popup  = ({ close, el } : PopupProps)=> {
 
 
 

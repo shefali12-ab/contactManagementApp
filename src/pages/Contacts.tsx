@@ -17,10 +17,7 @@ interface Contact {
 const Contacts = () => {
   const AllContacts = useSelector((state:any) => state.users); // Initialize as empty array if undefined
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [singleContact, setSingleContact] = useState({
-   
-
-  });
+  const [singleContact, setSingleContact] = useState<any>();
   let data : Contact 
   const dispatch = useDispatch();
   const togglePopup = (contact: Contact) => {
@@ -54,7 +51,7 @@ const Contacts = () => {
             alt="search image"
             className="object-contain h-[50%] w-[30%]"
           />
-          <p className="text-2xl text-blue-500 font-bold m-4">
+          <p className=" sm:text-2xl text-blue-500 font-bold m-4">
             No Contact Found Please add contact using <br /> create contact
             button
           </p>
@@ -76,7 +73,7 @@ const Contacts = () => {
                 />
                 <div>
                   {isOpen && (
-                    <Popup close={() => togglePopup( data )} el={singleContact} />
+                    <Popup close={() => togglePopup( data )} el={singleContact } />
                   )}
                  
                 </div>
