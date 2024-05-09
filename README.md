@@ -41,7 +41,7 @@ https://disease.sh/v3/covid-19/historical/all?lastdays=all
 
 **Install the dependencies using:** npm install
 
-** Run the app using:** npm run dev
+**Run the app using:** npm run dev
 
 
 
