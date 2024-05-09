@@ -34,7 +34,7 @@ const userSlice = createSlice({
       const uu= state.find((user:User) => user.id == id)
       if(uu)
         {
-          return state.filter ( f=> f.id !== id)
+          return state.filter ( (f:any)=> f.id !== id)
         }
     }
   }
