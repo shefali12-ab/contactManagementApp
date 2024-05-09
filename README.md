@@ -51,6 +51,17 @@ https://disease.sh/v3/covid-19/historical/all?lastdays=all
 ## Screenshots
 
 ### Contacts page
+![Vite-React-TS](https://github.com/shefali12-ab/contactManagementApp/assets/56781823/18906f04-c3e3-4d82-8003-8b6d44b77861)
+
+![Vite-React-TS (6)](https://github.com/shefali12-ab/contactManagementApp/assets/56781823/d52221f0-f483-4cb6-a5df-d40214d4ef09)
+
+![Vite-React-TS (5)](https://github.com/shefali12-ab/contactManagementApp/assets/56781823/5e631ab7-0cd4-4b80-9652-037c41bee3e8)
+
+### Charts and Maps Page
+![Vite-React-TS (3)](https://github.com/shefali12-ab/contactManagementApp/assets/56781823/5d6561b4-1a66-45e0-9a81-5c9b7c438eb1)
+
+
+
 
 
 
