@@ -1,7 +1,7 @@
-import  { useEffect } from 'react';
-import {  useQuery } from 'react-query';
+import  { useEffect } from "react";
+import {  useQuery } from "react-query";
 import { Line } from "react-chartjs-2";
-import 'leaflet/dist/leaflet.css';
+import "leaflet/dist/leaflet.css";
 
 import { MapContainer, TileLayer } from "react-leaflet";
 import { CategoryScale, Chart as ChartJS, Legend, LineElement, LinearScale, PointElement, Title, Tooltip } from 'chart.js';
@@ -30,8 +30,8 @@ const ChartsMaps = () => {
     fetchChartData();
     fetchCountryData();
   }, []);
- console.log(chartData)
- console.log(countriesData)
+//  console.log(chartData)
+//  console.log(countriesData)
 
  
 

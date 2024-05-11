@@ -6,7 +6,7 @@ import ChartsMaps from "./pages/ChartsMaps";
 
 import EditContactForm from "./components/EditContactForm";
 import ContactForm from "./components/ContactForm";
-import Sidebar from "./components/Sidebar";
+import SideBar from "./components/SideBar";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         {pathname == "/chart" ? "Charts And Maps" : "Contact Management App"}
       </nav>
       <div className="flex w-full ">
-        <Sidebar />
+        <SideBar />
 
         <Routes>
           <Route path="/" element={<Contacts />} />

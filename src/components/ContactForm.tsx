@@ -7,10 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { addUser } from "../redux/UserReducer";
 
 const ContactForm = () => {
-  const [firstname, setfirstname] = useState("");
-  const [lastname, setlastname] = useState("");
-  const [mobile, setmobile] = useState("");
-  const [status, setstatus] = useState("active");
+  const [firstName, setfirstName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [status, setStatus] = useState("active");
   const users = useSelector((state: any) => state.users);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const ContactForm = () => {
     //console.log("clicked")
     e.preventDefault();
     dispatch(
-      addUser({ id: users.length, firstname, lastname, mobile, status })
+      addUser({ id: users.length, firstName, lastName, mobile, status })
     );
     navigate("/");
   };
@@ -33,31 +33,33 @@ const ContactForm = () => {
         type="text"
         className="border-2 p-1  border-blue-500"
         name="first_name"
-        value={firstname}
-        onChange={(e) => setfirstname(e.target.value)}
+        value={firstName}
+        onChange={(e) => setfirstName(e.target.value)}
       />
       <input
         placeholder="LastName"
         type="text"
         className="border-2 p-1  border-blue-500"
         name="last_name"
-        value={lastname}
-        onChange={(e) => setlastname(e.target.value)}
+        value={lastName}
+        onChange={(e) => setlastName(e.target.value)}
       />
       <input
         placeholder="MobileNumber"
-        type="number"
+        type="tel"
+       maxLength={10}
         className="border-2 p-1  border-blue-500"
         name="mob"
         value={mobile}
-        onChange={(e) => setmobile(e.target.value)}
+        onChange={(e) => setMobile(e.target.value)}
+        
       />
       <label>Status</label>
       <select
         className="w-full border border-gray-400 p-2 rounded-md"
         name="status"
         value={status}
-        onChange={(e) => setstatus(e.target.value)}
+        onChange={(e) => setStatus(e.target.value)}
       >
         <option value="active">Active</option>
         <option value="inactive">Inactive</option>

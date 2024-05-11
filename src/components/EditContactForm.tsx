@@ -38,10 +38,11 @@ const EditContactForm = () => {
       <input placeholder="LastName" type="text" className="border-2 p-1"  value={ulastname} onChange={e=> setlastname(e.target.value)}/>
       <input
         placeholder="MobileNumber"
-        type="number"
-       
+        type="tel"
+       maxLength={10}
         className="border-2 p-1" value={umobile}
         onChange={e=> setmobile(e.target.value)}
+      
       />
       <label>Status</label>
      

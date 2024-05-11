@@ -1,6 +1,6 @@
 import { Marker, Popup } from "react-leaflet"
-import L from 'leaflet';
-import markerIcon from '../assets/marker_icon.png';
+import L from "leaflet";
+import markerIcon from "../assets/marker_icon.png";
 const WorldMap=(countries:any)=>{
 
   const {countriesData}=countries

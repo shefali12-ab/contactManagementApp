@@ -7,7 +7,7 @@ import { deleteUser } from "../redux/UserReducer";
 import contact from "../assets/searchimg1.jpg";
 import contactpfp from "../assets/icon-profile.png";
 
-import Popup from "../components/Popup";
+import PopUp from "../components/PopUp";
 
 
 interface Contact {
@@ -77,7 +77,7 @@ const Contacts = () => {
                 />
                 <div>
                   {isOpen && (
-                    <Popup close={() => togglePopup( data )} el={singleContact } />
+                    <PopUp close={() => togglePopup( data )} el={singleContact } />
                   )}
                  
                 </div>

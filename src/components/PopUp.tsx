@@ -12,7 +12,7 @@ interface PopupProps {
   close: Function;
   el: User;
 }
-const Popup = ({ close, el }: PopupProps) => {
+const PopUp = ({ close, el }: PopupProps) => {
   return (
     <div className="fixed top-0    text-black left-0 w-full h-full  bg-opacity-20 bg-black flex items-center justify-center">
       <div className="bg-white drop-shadow-md rounded-md p-4 w-mid">
@@ -41,4 +41,4 @@ const Popup = ({ close, el }: PopupProps) => {
   );
 };
 
-export default Popup;
+export default PopUp;
